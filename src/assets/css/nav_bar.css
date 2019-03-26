@@ -1,0 +1,26 @@
+nav {
+    background-color: #cd92a8;
+}
+
+nav ul a {
+    font-size: 1.5rem;
+}
+
+nav .brand-logo {
+    font-size: 3.1rem;
+}
+
+.sidenav .divider {
+    margin: 0 0 0 0;
+}
+
+.sidenav li>a {
+    color: #cd92a8;
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 320px) {
+    nav .brand-logo {
+        font-size: 2.7rem;
+    }
+}

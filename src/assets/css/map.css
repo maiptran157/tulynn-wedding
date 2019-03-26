@@ -1,0 +1,51 @@
+.map-loading-text {
+    color: white;
+}
+
+.marker img {
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    width: 50px;
+    transform: translate(-50%, -50%);
+}
+
+.marker img:hover {
+    cursor: pointer;
+    transform: translate(-50%, -50%) translate3d(0px, 0px, 0px) scale(1.6, 1.6);
+    transition: -webkit-transform 0.25s cubic-bezier(0.485, 1.65, 0.545, 0.835) 0s;
+}
+
+.info-box {
+    display: none;
+    /* display: inline-block; */
+    font-family: 'Dancing Script', cursive;
+    padding: 10px;
+    background-color: white;
+    margin-top: -1px;
+    margin-left: -58px;
+    width: 160px;
+    font-size: 10px;
+}
+
+.info-box span {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.arrow-up {
+    display: none;
+    margin-top: -25px;
+    margin-left: -9px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+  }
+
+  #root > div > main > div > div > div.map-container > div > div > div > div > div:nth-child(3) > a > div > img {
+    background-color: #cd92a8;
+    border-radius: 5px;
+    padding: 5px;
+  }

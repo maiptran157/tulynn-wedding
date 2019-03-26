@@ -1,0 +1,59 @@
+.rsvp-container {
+    color: #cd92a8;
+}
+
+.send-btn {
+    background-color: #cd92a8;
+}
+
+.send-btn:hover {
+    background-color: #cd8aa2;
+}
+
+.rsvp-container container {
+    width: 700px;
+}
+
+.rsvp-container h4 a {
+    color: #2e2c35;
+}
+
+.input-field input {
+    font-family: 'Dancing Script', cursive;
+}
+
+ /* label focus color */
+.input-field input[type=text]:focus + label {
+    color: #cd92a8 !important;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #cd92a8 !important;
+    box-shadow: 0 1px 0 0 #cd92a8 !important;
+}
+
+.to-event{
+    color: #2e2c35;
+}
+
+.input-field.col label {
+    font-size: 20px;
+    margin-left: -10px;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+    color: #cd92a8 !important;
+}
+
+.dropdown-content.select-dropdown{
+    top: -15px;
+}
+
+.warning-text {
+    color: #d3372b;
+    transition: .3s;
+}
+
+.rsvp-sent {
+    margin-top: 200px;
+}

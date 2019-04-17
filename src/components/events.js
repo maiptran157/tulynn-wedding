@@ -15,12 +15,12 @@ const eventsPlaces = [{
     "direction_url": "https://goo.gl/maps/symiAFq8KkQ2"
 }, {
     "type": "reception",
-    "formatted_address": "12181 Brookhurst St, Garden Grove, CA 92840, USA",
-    "place_id": "ChIJAyfQnGgo3YARVsXMEf-cqlU",
-    "name": "Diamond Seafood Palace 2",
+    "formatted_address": "3350 Avenue of the Arts, Costa Mesa, CA 92626, USA",
+    "place_id": "ChIJNVK_Hiff3IARlbeVYH8aywg",
+    "name": "Avenue of the Arts Costa Mesa",
     "time": "5:00 PM Sunday, June 30, 2019",
     "image_url": weddingReceptionIcon,
-    "direction_url": "https://goo.gl/maps/JxJ6XYKuQ1m"
+    "direction_url": "https://goo.gl/maps/oUmHZ3yKfPdAPudL8"
 }
 ]
 

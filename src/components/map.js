@@ -17,13 +17,13 @@ const eventsPlaces = [{
     "image_url": weddingCeremonyIcon,
 }, {
     "type": "reception",
-    "formatted_address": "12181 Brookhurst St, Garden Grove, CA 92840, USA",
+    "formatted_address": "3350 Avenue of the Arts, Costa Mesa, CA 92626, USA",
     "location": {
-        "lat": 33.78575,
-        "lng": -117.9598178
+        "lat": 33.691459,
+        "lng": -117.8805782
     },
-    "place_id": "ChIJAyfQnGgo3YARVsXMEf-cqlU",
-    "name": "Diamond Seafood Palace 2",
+    "place_id": "ChIJNVK_Hiff3IARlbeVYH8aywg",
+    "name": "Avenue of the Arts Costa Mesa",
     "image_url": weddingReceptionIcon,
 }
 ]

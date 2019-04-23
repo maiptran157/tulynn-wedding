@@ -1,32 +1,7 @@
 import '../assets/css/map.css';
-import weddingCeremonyIcon from '../assets/images/wedding_ceremony_icon.png';
-import weddingReceptionIcon from '../assets/images/wedding_reception_icon.png';
 import React, { Component, Fragment } from 'react';
 import apiKey from '../config/api_key';
 import GoogleMapReact from 'google-map-react';
-
-const eventsPlaces = [{
-    "type": "wedding ceremony",
-    "formatted_address": "10801 Stanford Ave, Garden Grove, CA 92840, USA",
-    "location": {
-        "lat": 33.778022,
-        "lng": -117.9441904
-    },
-    "place_id": "ChIJw41_cgwo3YARgwYIPupA1Mk",
-    "name": "Saint Columban Catholic Church",
-    "image_url": weddingCeremonyIcon,
-}, {
-    "type": "reception",
-    "formatted_address": "12181 Brookhurst St, Garden Grove, CA 92840, USA",
-    "location": {
-        "lat": 33.78575,
-        "lng": -117.9598178
-    },
-    "place_id": "ChIJAyfQnGgo3YARVsXMEf-cqlU",
-    "name": "Diamond Seafood Palace 2",
-    "image_url": weddingReceptionIcon,
-}
-]
 
 // Return map bounds based on list of places
 const getMapBounds = (map, maps, places) => {
@@ -84,17 +59,13 @@ const Marker = ({ image_url, place_id, type, name, formatted_address }) => {
     </Fragment>
 };
 
-class Map extends Component {
+class MapContainer extends Component {
     static defaultProps = {
-        center: {
-            lat: 33.7743,
-            lng: 117.9380
-        },
         zoom: 11
     };
 
     renderMarker() {
-        return eventsPlaces.map((place) => {
+        return this.props.eventDetail.map((place) => {
             return <Marker
                 key={place.place_id}
                 place_id={place.place_id}
@@ -108,21 +79,25 @@ class Map extends Component {
         })
     }
 
+    renderMap() {
+        return <GoogleMapReact
+            bootstrapURLKeys={{ key: apiKey.GOOGLE_PLACES_API_KEY }}
+            defaultCenter={this.props.mapCenter}
+            defaultZoom={this.props.zoom}
+            yesIWantToUseGoogleMapApiInternals
+            onGoogleApiLoaded={({ map, maps }) => apiIsLoaded(map, maps, this.props.eventDetail)}
+        >
+            {this.renderMarker()}
+        </GoogleMapReact>
+    }
+
     render() {
         return (
             <div className="map-container">
-                <GoogleMapReact
-                    bootstrapURLKeys={{ key: apiKey.GOOGLE_PLACES_API_KEY }}
-                    defaultCenter={this.props.center}
-                    defaultZoom={this.props.zoom}
-                    yesIWantToUseGoogleMapApiInternals
-                    onGoogleApiLoaded={({ map, maps }) => apiIsLoaded(map, maps, eventsPlaces)}
-                >
-                    {this.renderMarker()}
-                </GoogleMapReact>
+                {this.renderMap()}
             </div>
         );
     }
 }
 
-export default Map;
+export default MapContainer;

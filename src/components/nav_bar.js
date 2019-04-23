@@ -40,11 +40,11 @@ class NavBar extends Component {
             </nav>
             <ul id="nav-mobile" className="sidenav">
                 <li className={this.checkIfHomeActive()}><Link className="waves-effect" to="/">Home</Link></li>
-                <li><div class="divider"></div></li>
+                <li><div className="divider"></div></li>
                 <li className={this.checkIfActice("/rsvp")}><Link className="waves-effect" to="/rsvp">RSVP</Link></li>
-                <li><div class="divider"></div></li>
+                <li><div className="divider"></div></li>
                 <li className={this.checkIfActice("/photos")}><Link className="waves-effect" to="/photos">Photos</Link></li>
-                <li><div class="divider"></div></li>
+                <li><div className="divider"></div></li>
                 <li className={this.checkIfActice("/events")}><Link className="waves-effect" to="/events">Events</Link></li>
             </ul>
         </Fragment>

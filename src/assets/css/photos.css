@@ -1,12 +1,18 @@
 .carousel {
     overflow: inherit;
+    height: 500px;
+    margin-top: 10px;
 }
-
 
 .carousel .carousel-item {
     width: 24vw;
     height: 400px;
 }
+
+/* .carousel-item img {
+    image-rendering: optimizeSpeed !important;
+    image-resolution: 72dpi !important;
+} */
 
 @media only screen and (max-width: 768px) {
     .carousel {

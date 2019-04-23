@@ -14,13 +14,24 @@ nav .brand-logo {
     margin: 0 0 0 0;
 }
 
-.sidenav li>a {
+.sidenav li>a, .sidenav li>span {
     color: #cd92a8;
     font-size: 1.5rem;
+    padding: 0 32px;
+}
+
+.sidenav li>a.submenu>span, .sidenav li>a.submenu>i {
+    font-size: 1.3rem;
+    color: #cd92a8;
 }
 
 @media only screen and (max-width: 320px) {
     nav .brand-logo {
         font-size: 2.7rem;
     }
+}
+
+#dropdown1 {
+    width: 140px !important;
+    height: 100px !important;
 }

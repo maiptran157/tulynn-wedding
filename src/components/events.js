@@ -2,7 +2,7 @@ import '../assets/css/events.css';
 import flowerLine from '../assets/images/flower_line_1.png';
 import weddingCeremonyIcon from '../assets/images/wedding_ceremony_icon.png';
 import weddingReceptionIcon from '../assets/images/wedding_reception_icon.png';
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import MapContainer from './map';
 
 const eventsPlaces = [{
@@ -25,7 +25,7 @@ const eventsPlaces = [{
             "image_url": weddingCeremonyIcon,
             "direction_url": "https://goo.gl/maps/symiAFq8KkQ2"
         }, {
-            "type": "reception",
+            "type": "wedding reception",
             "formatted_address": "3350 Avenue of the Arts, Costa Mesa, CA 92626, USA",
             "place_id": "ChIJNVK_Hiff3IARlbeVYH8aywg",
             "name": "Avenue of the Arts Costa Mesa",
@@ -44,7 +44,7 @@ const eventsPlaces = [{
         "lng": 106.6297
     },
     "eventDetail": [{
-        "type": "reception",
+        "type": "wedding reception",
         "formatted_address": "17 Lê Duẩn, Bến Nghé, Quận 1, Hồ Chí Minh 070000, Vietnam",
         "place_id": "ChIJpV-7MUovdTERS3tmu3Rt9kw",
         "name": "Sofitel Saigon Plaza",
@@ -57,11 +57,11 @@ const eventsPlaces = [{
         "direction_url": "https://goo.gl/maps/Raq81WRxfVWm56Qq9"
     },
     {
-        "type": "test",
-        "formatted_address": "test",
-        "place_id": "test",
-        "name": "test",
-        "time": "test",
+        "type": "dummy",
+        "formatted_address": "dummy",
+        "place_id": "dummy",
+        "name": "dummy",
+        "time": "dummy",
         "location": {
             "lat": 10.7744334,
             "lng": 106.6998882
@@ -110,24 +110,37 @@ export default class Events extends Component {
         }
     }
 
+    renderEventBasedOnURL() {
+        const { pathname } = this.props.location;
+        if (pathname === "/events/usa") {
+            return <Fragment>
+                <h5 className="center">Event Details for California, USA</h5>
+                <div className="container event-map-and-detail-container">
+                    <MapContainer destination="USA" mapCenter={this.passCenterPropsToMap("USA")} eventDetail={this.passEventDetailPropsToMap("USA")} />
+                    <div className="event-detail-container">
+                        {this.renderEventDetail("USA")}
+                    </div>
+                </div>
+            </Fragment>
+        }
+        return <Fragment>
+            <h5 className="center">Event Details for Ho Chi Minh, Vietnam</h5>
+            <div className="container event-map-and-detail-container vn-event-container">
+                <MapContainer destination="Vietnam" mapCenter={this.passCenterPropsToMap("Vietnam")} eventDetail={this.passEventDetailPropsToMap("Vietnam")} />
+                <div className="event-detail-container">
+                    {this.renderEventDetail("Vietnam")}
+                </div>
+            </div>
+        </Fragment>
+    }
+
     render() {
         return <div className="container events-container">
             <h4 className="center">Events
                 <br />
                 <img className="flower-line" src={flowerLine} alt="" />
             </h4>
-            <div className="container event-map-and-detail-container">
-                <MapContainer destination="USA" mapCenter={this.passCenterPropsToMap("USA")} eventDetail={this.passEventDetailPropsToMap("USA")} />
-                <div className="event-detail-container">
-                    {this.renderEventDetail("USA")}
-                </div>
-            </div>
-            <div className="container event-map-and-detail-container">
-                <MapContainer destination="Vietnam" mapCenter={this.passCenterPropsToMap("Vietnam")} eventDetail={this.passEventDetailPropsToMap("Vietnam")} />
-                <div className="event-detail-container">
-                    {this.renderEventDetail("Vietnam")}
-                </div>
-            </div>
+            {this.renderEventBasedOnURL()}
         </div>
     }
 }   

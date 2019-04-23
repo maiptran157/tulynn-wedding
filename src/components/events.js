@@ -3,7 +3,7 @@ import flowerLine from '../assets/images/flower_line_1.png';
 import weddingCeremonyIcon from '../assets/images/wedding_ceremony_icon.png';
 import weddingReceptionIcon from '../assets/images/wedding_reception_icon.png';
 import React, { Component } from 'react';
-import Map from './map';
+import MapContainer from './map';
 
 const eventsPlaces = [{
     "destination": "USA",
@@ -49,13 +49,25 @@ const eventsPlaces = [{
         "place_id": "ChIJpV-7MUovdTERS3tmu3Rt9kw",
         "name": "Sofitel Saigon Plaza",
         "time": "5:00 PM Sunday, June 23, 2019",
-
         "location": {
             "lat": 10.784207,
             "lng": 106.702673
         },
         "image_url": weddingReceptionIcon,
         "direction_url": "https://goo.gl/maps/Raq81WRxfVWm56Qq9"
+    },
+    {
+        "type": "test",
+        "formatted_address": "test",
+        "place_id": "test",
+        "name": "test",
+        "time": "test",
+        "location": {
+            "lat": 10.7744334,
+            "lng": 106.6998882
+        },
+        "image_url": weddingReceptionIcon,
+        "direction_url": "#"
     }]
 }
 ]
@@ -105,13 +117,13 @@ export default class Events extends Component {
                 <img className="flower-line" src={flowerLine} alt="" />
             </h4>
             <div className="container event-map-and-detail-container">
-                <Map destination="USA" mapCenter={this.passCenterPropsToMap("USA")} eventDetail={this.passEventDetailPropsToMap("USA")} />
+                <MapContainer destination="USA" mapCenter={this.passCenterPropsToMap("USA")} eventDetail={this.passEventDetailPropsToMap("USA")} />
                 <div className="event-detail-container">
                     {this.renderEventDetail("USA")}
                 </div>
             </div>
             <div className="container event-map-and-detail-container">
-                <Map destination="Vietnam" mapCenter={this.passCenterPropsToMap("Vietnam")} eventDetail={this.passEventDetailPropsToMap("Vietnam")} />
+                <MapContainer destination="Vietnam" mapCenter={this.passCenterPropsToMap("Vietnam")} eventDetail={this.passEventDetailPropsToMap("Vietnam")} />
                 <div className="event-detail-container">
                     {this.renderEventDetail("Vietnam")}
                 </div>

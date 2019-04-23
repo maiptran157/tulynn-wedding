@@ -1,3 +1,7 @@
+/* .map-container div {
+    position: relative !important;
+} */
+
 .map-loading-text {
     color: white;
 }
@@ -48,4 +52,16 @@
     background-color: #cd92a8;
     border-radius: 5px;
     padding: 5px;
+  }
+
+  #root > div > main > div > div:nth-child(3) > div.event-detail-container > div:nth-child(2) {
+      display: none;
+      pointer-events: none;
+      cursor: default;
+  }
+
+  #root > div > main > div > div:nth-child(3) > div.map-container > div > div > div > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(3) > div > div > div:nth-child(2) > div.marker {
+      display: none;
+      pointer-events: none;
+      cursor: default;
   }

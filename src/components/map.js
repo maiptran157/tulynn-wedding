@@ -59,7 +59,7 @@ const Marker = ({ image_url, place_id, type, name, formatted_address }) => {
     </Fragment>
 };
 
-class Map extends Component {
+class MapContainer extends Component {
     static defaultProps = {
         zoom: 11
     };
@@ -100,4 +100,4 @@ class Map extends Component {
     }
 }
 
-export default Map;
+export default MapContainer;

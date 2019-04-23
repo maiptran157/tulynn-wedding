@@ -25,7 +25,7 @@ const eventsPlaces = [{
             "image_url": weddingCeremonyIcon,
             "direction_url": "https://goo.gl/maps/symiAFq8KkQ2"
         }, {
-            "type": "reception",
+            "type": "wedding reception",
             "formatted_address": "3350 Avenue of the Arts, Costa Mesa, CA 92626, USA",
             "place_id": "ChIJNVK_Hiff3IARlbeVYH8aywg",
             "name": "Avenue of the Arts Costa Mesa",
@@ -44,7 +44,7 @@ const eventsPlaces = [{
         "lng": 106.6297
     },
     "eventDetail": [{
-        "type": "reception",
+        "type": "wedding reception",
         "formatted_address": "17 Lê Duẩn, Bến Nghé, Quận 1, Hồ Chí Minh 070000, Vietnam",
         "place_id": "ChIJpV-7MUovdTERS3tmu3Rt9kw",
         "name": "Sofitel Saigon Plaza",

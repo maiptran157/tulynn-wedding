@@ -13,6 +13,10 @@
     color: #cd92a8;
 }
 
+.home-container h5 a {
+    color: #2e2c35;
+}
+
 @media only screen and (max-width:1370px) {
     .home-container img {
         width: 350px;

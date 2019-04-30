@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/home_2.c6c5d9e0.jpg"
   },
   {
-    "revision": "78b712ea2112fbad3852",
-    "url": "/static/css/main.13d01a69.chunk.css"
+    "revision": "2b49150a48ebcd848a75",
+    "url": "/static/css/main.05dc08c9.chunk.css"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/static/media/wedding_ceremony_icon.f84166ab.png"
   },
   {
-    "revision": "74a5683d85f53c3db24a",
-    "url": "/static/js/2.479640a7.chunk.js"
+    "revision": "ace49d51d7ca52889303",
+    "url": "/static/js/2.1fad018f.chunk.js"
   },
   {
     "revision": "89cc6225e8551c45771fc0164e895fe3",
@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "url": "/static/media/home_1.6bbdaa87.jpg"
   },
   {
-    "revision": "78b712ea2112fbad3852",
-    "url": "/static/js/main.9ef6eddb.chunk.js"
+    "revision": "2b49150a48ebcd848a75",
+    "url": "/static/js/main.69319064.chunk.js"
   },
   {
     "revision": "b0c76edd8f3e4d6c57896bb26f3ec0bb",
@@ -48,8 +48,8 @@ self.__precacheManifest = [
     "url": "/static/media/photos_2.12b02670.jpg"
   },
   {
-    "revision": "2961034caf86faa6f06b7848cd3f0727",
-    "url": "/static/media/photos_3.2961034c.jpg"
+    "revision": "885e0bdc39e03af738bfdb34911c4e6a",
+    "url": "/static/media/photos_3.885e0bdc.jpg"
   },
   {
     "revision": "5599aa7f62659a9e03b040487bf6d422",
@@ -68,11 +68,11 @@ self.__precacheManifest = [
     "url": "/static/media/photos_7.00fa6b46.jpg"
   },
   {
-    "revision": "74a5683d85f53c3db24a",
+    "revision": "ace49d51d7ca52889303",
     "url": "/static/css/2.8c06e6b3.chunk.css"
   },
   {
-    "revision": "e498ed9329b9a5f986129cb4d46ee97b",
+    "revision": "901df647f54fb1e2ba7f074095d11d89",
     "url": "/index.html"
   }
 ];

@@ -1,30 +1,31 @@
 .carousel {
     overflow: inherit;
-    height: 500px;
+    height: 600px;
     margin-top: 10px;
 }
 
 .carousel .carousel-item {
-    width: 24vw;
-    height: 400px;
+    width: 27vw;
+    height: 500px;
 }
-
-/* .carousel-item img {
-    image-rendering: optimizeSpeed !important;
-    image-resolution: 72dpi !important;
-} */
 
 @media only screen and (max-width: 768px) {
     .carousel {
         overflow: hidden;
+        height: 550px;
     }
     .carousel .carousel-item {
         width: 45vw;
+        height: 450px;
     }
 }
 
 @media only screen and (max-width: 414px) {
+    .carousel {
+        height: 500px;
+    }
     .carousel .carousel-item {
         width: 65vw;
+        height: 400px;
     }
 }

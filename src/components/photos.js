@@ -2,15 +2,17 @@ import M from 'materialize-css';
 import '../assets/css/photos.css';
 import React, { Component } from 'react';
 import flowerLine from '../assets/images/flower_line_1.png';
-import photos1 from '../assets/images/photos_1.jpg';
-import photos2 from '../assets/images/photos_2.jpg';
-import photos3 from '../assets/images/photos_3.jpg';
-import photos4 from '../assets/images/photos_4.jpg';
-import photos5 from '../assets/images/photos_5.jpg';
-import photos6 from '../assets/images/photos_6.jpg';
-import photos7 from '../assets/images/photos_7.jpg';
 
-const photos = [photos1, photos2, photos3, photos4, photos5, photos6, photos7];
+const photos = [
+    "https://tulynn-wedding.s3-us-west-1.amazonaws.com/tulynn_wedding_photo_08.jpg",
+    "https://tulynn-wedding.s3-us-west-1.amazonaws.com/tulynn_wedding_photo_01.jpg",
+    "https://tulynn-wedding.s3-us-west-1.amazonaws.com/tulynn_wedding_photo_02.jpg",
+    "https://tulynn-wedding.s3-us-west-1.amazonaws.com/tulynn_wedding_photo_03.jpg",
+    "https://tulynn-wedding.s3-us-west-1.amazonaws.com/tulynn_wedding_photo_09.jpg",
+    "https://tulynn-wedding.s3-us-west-1.amazonaws.com/tulynn_wedding_photo_06.jpg",
+    "https://tulynn-wedding.s3-us-west-1.amazonaws.com/tulynn_wedding_photo_05.jpg",
+    "https://tulynn-wedding.s3-us-west-1.amazonaws.com/tulynn_wedding_photo_10.jpg",
+];
 
 export default class Photos extends Component {
     componentDidMount() {

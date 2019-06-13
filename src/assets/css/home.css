@@ -25,19 +25,7 @@
 
 @media only screen and (max-width: 992px) {
     .home-container img {
-        width: 350px;
-    }
-}
-
-@media only screen and (max-width: 810px) {
-    .home-container img {
         width: 300px;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .home-container img {
-        width: 350px;
     }
 }
 
